@@ -8,27 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="checkTasksView()">
     <section class="AppContainer">
         <div>
             <h1>To-Do List &#x1F4DD</h1>
         </div>
 
         <div class="taskBar">
-            <input class="taskAddInput" type="text" placeholder='The task in vague words'>
-            <button class="taskAddButton" type="button">Add Task</button>
+            <input maxlength=25 id="taskAddInput" class="taskAddInput" type="text" placeholder='The task in vague words'>
+            <button id="addTaskBtn" class="taskAddButton" type="button">Add Task</button>
         </div>
 
-        <div class="listArea">
-            <div class="taskItem">
-                <input class="taskItemCheck" type="checkbox" name="task1" id="task1">
-                <span class="taskItemText">Fazer isso aq funcionar</span>
-                <div class="taskIconButtons">
-                    <button class="taskItemBtn"><i class="fa-solid fa-pencil"></i></button>
-                    <button class="taskItemBtn"><i class="fa-solid fa-x"></i></button>
-                </div>
-            </div>
-        </div>
+        <div class="listArea" id="tasksView" hidden></div>
     </section>
+    <script src="js/main.js"></script>
 </body>
 </html>
